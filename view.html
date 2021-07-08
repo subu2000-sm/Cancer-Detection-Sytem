@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        input[type=text] {  
+  width: 300px;  
+  
+}  
+    </style>
+  </head>
+  <body>
+      
+   <center><form  action="/"  method="POST">
+        <div class="mb-3">
+          <label for="clump" class="form-label">Clump thickness</label>
+          <input type="text" class="form-control" id="clump" name="clump" >
+
+        </div>
+        <div class="mb-3">
+            <label for="unifsize" class="form-label">Uniformity of size</label>
+            <input type="text" class="form-control" id="size" name="size" >
+  
+          </div>
+          <div class="mb-3">
+            <label for="unifshape" class="form-label">Uniformity of shape size</label>
+            <input type="text" class="form-control" id="shape" name="shape">
+  
+          </div>
+          <div class="mb-3">
+            <label for="MargAd" class="form-label">Marginal Adhession</label>
+            <input type="text" class="form-control" id="margd" name="margd">
+  
+          </div>
+          <div class="mb-3">
+            <label for="episize" class="form-label">Single Epithelial Cell size</label>
+            <input type="text" class="form-control" id="epithsize" name="epithsize">
+  
+          </div>
+          <div class="mb-3">
+            <label for="bland" class="form-label">Bland Chromatin</label>
+            <input type="text" class="form-control" id="bland" name="bland">
+  
+          </div>
+          <div class="mb-3">
+            <label for="nn" class="form-label">Normal Nuclei</label>
+            <input type="text" class="form-control" id="nn" name="nn">
+  
+          </div>
+          <div class="mb-3">
+            <label for="mit" class="form-label">Mitosis</label>
+            <input type="text" class="form-control" id="mit"  name="mit">
+  
+          </div>
+
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p>
+            {% if result != None %}
+            <h4>Cancer Cell Type:</h4>
+            <label id = "res">{{result1}}</label>
+            {% endif %}
+            </p>
+      </form>
+  </body>
+</html>
